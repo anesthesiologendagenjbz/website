@@ -2,6 +2,7 @@
 import { loadData, isCorrectAnswer, cacheBuster } from './data.js';
 import { loadState, saveState, resetState, markAttempt, markSolved, isSolved } from './storage.js';
 import { renderHome, renderAssignmentsList, renderAssignmentDetail, setMessage, showReveal } from './ui.js';
+import { renderAdmin } from './admin.js';
 
 const app = document.getElementById('app');
 const resetBtn = document.getElementById('reset-progress');
@@ -45,6 +46,9 @@ function renderRoute(hash) {
       break;
     case '/about':
       renderAbout();
+      break;
+    case '/admin':
+      renderAdmin(app);
       break;
     default:
       location.hash = '#/assignments';

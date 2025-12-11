@@ -1,5 +1,5 @@
 // sw.js — simple offline cache for app shell + data
-const CACHE = 'jbz-cache-v2025-12-11';
+const CACHE = 'jbz-cache-v2025-12-11-7';
 const basePath = new URL(self.registration.scope).pathname.replace(/\/$/, '');
 const CORE = [
   `${basePath}/`,
@@ -9,7 +9,8 @@ const CORE = [
   `${basePath}/assets/js/app.js`,
   `${basePath}/assets/js/data.js`,
   `${basePath}/assets/js/storage.js`,
-  `${basePath}/assets/js/ui.js`
+  `${basePath}/assets/js/ui.js`,
+  `${basePath}/assets/js/admin.js`
 ];
 
 self.addEventListener('install', (e) => {

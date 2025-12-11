@@ -29,7 +29,7 @@ Zet de salt en hash in assignments.json
 Node
   npx http-server -p 5173 -c-1 .
 
-Content maken (geen plaintext antwoorden committen)
+Content maken (geen plaintext antwoorden opslaan in leesbare vorm)
 Er zijn nu drie ondersteunde formaten voor antwoorden in `assignments.json` (je kunt kiezen wat bij je past):
 
 1) Enkel veld, géén salt (nieuw en simpel)
@@ -89,7 +89,7 @@ Assignments JSON schema (voorbeelden)
 }
 
 Deploy (GitHub Pages)
-1) Commit & push main.
+1) Push naar main (via GitHub web UI of je eigen Git client).
 2) GitHub → Settings → Pages → Deploy from branch → main, root.
 
 Beveiliging/Privacy

@@ -7,7 +7,7 @@ export async function loadData() {
 }
 
 export function cacheBuster() {
-  return '2025-12-11-2';
+  return '2025-12-11-7';
 }
 
 export function normalize(input, rules = { trim: true, case: 'insensitive' }) {
