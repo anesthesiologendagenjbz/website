@@ -29,7 +29,6 @@ export function renderAssignmentsList(container, data, state) {
   for (const a of data.assignments) {
     const status = isSolved(state, a.id) ? 'ok' : 'unsolved';
     const card = el(`<article class="card" aria-labelledby="a-${a.id}">
-      <div class="kicker">Opdracht ${a.id}</div>
       <h3 id="a-${a.id}" class="title">${escapeHtml(a.title)}</h3>
       <div><span class="badge ${status}">${status === 'ok' ? 'Opgelost' : 'Niet opgelost'}</span></div>
       <div style="margin-top:auto"><a class="btn btn-secondary" href="#/assignment/${a.id}">Openen</a></div>
@@ -43,7 +42,6 @@ export function renderAssignmentDetail(container, assignment, stateEntry, opts) 
   const solved = !!(stateEntry && stateEntry.solvedAt);
   container.innerHTML = '';
   const wrap = el(`<article class="card" aria-labelledby="t-${assignment.id}">
-    <div class="kicker">Opdracht ${assignment.id}</div>
     <h2 id="t-${assignment.id}" class="title">${escapeHtml(assignment.title)}</h2>
     <p>${escapeHtml(assignment.description)}</p>
   </article>`);

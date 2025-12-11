@@ -79,7 +79,6 @@ export function renderAdmin(container) {
     const list = el('<div class="grid"></div>');
     (data.assignments || (data.assignments = [])).forEach((a, idx) => {
       const card = el(`<article class="card">
-        <div class="kicker">Opdracht ${a.id ?? (idx+1)}</div>
         <label>Titel<br><input class="a-title" type="text" value="${esc(a.title || '')}"></label>
         <label>Omschrijving<br><input class="a-desc" type="text" value="${esc(a.description || '')}"></label>
         <label>Reveal (tekst)<br><input class="a-reveal" type="text" value="${esc(a.reveal && a.reveal.content || '')}"></label>
