@@ -78,7 +78,4 @@ form .row { display: flex; gap: .5rem; align-items: center; }
 
 code.inline { background: #111827; border: 1px solid var(--border); border-radius: .25rem; padding: .1rem .25rem; }
 
-.spinner { width: 1rem; height: 1rem; border: 2px solid #0000; border-top-color: currentColor; border-radius: 50%; animation: spin .8s linear infinite; display: inline-block; }
-@keyframes spin { to { transform: rotate(360deg); } }
-
 .noscript { margin: 1rem; padding: .75rem; border: 1px dashed var(--border); }

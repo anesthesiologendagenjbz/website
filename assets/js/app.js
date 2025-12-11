@@ -86,9 +86,9 @@ function renderAssignmentController(id) {
     e.preventDefault();
     const input = form.answer;
     const btn = form.querySelector('button');
-    const spinner = form.querySelector('.spinner');
+    const controleer = form.querySelector('.controleer');
     setMessage(msg, '');
-    btn.disabled = true; spinner.hidden = false;
+    btn.disabled = true; controleer.hidden = false;
     markAttempt(STATE, id); // record attempt regardless
     try {
       const ok = await isCorrectAnswer(a, input.value);
@@ -107,7 +107,7 @@ function renderAssignmentController(id) {
       console.error(err);
       setMessage(msg, 'Er trad een fout op bij het controleren.', 'error');
     } finally {
-      btn.disabled = false; spinner.hidden = true;
+      btn.disabled = false; controleer.hidden = true;
     }
   });
 }

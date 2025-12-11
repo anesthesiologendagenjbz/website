@@ -31,7 +31,7 @@ export function renderAssignmentsList(container, data, state) {
     const card = el(`<article class="card" aria-labelledby="a-${a.id}">
       <div class="kicker">Opdracht ${a.id}</div>
       <h3 id="a-${a.id}" class="title">${escapeHtml(a.title)}</h3>
-      <div><span class="badge ${status}">${status === 'ok' ? 'Opgelost' : 'Open'}</span></div>
+      <div><span class="badge ${status}">${status === 'ok' ? 'Opgelost' : 'Niet opgelost'}</span></div>
       <div style="margin-top:auto"><a class="btn btn-secondary" href="#/assignment/${a.id}">Openen</a></div>
     </article>`);
     grid.append(card);
@@ -52,7 +52,7 @@ export function renderAssignmentDetail(container, assignment, stateEntry, opts) 
       <label for="answer">Antwoord</label>
       <div class="row">
         <input id="answer" name="answer" type="text" inputmode="text" required aria-describedby="answer-help">
-        <button class="btn" type="submit"><span class="label">Controleer</span><span class="spinner" hidden aria-hidden="true"></span></button>
+        <button class="btn" type="submit"><span class="label">Controleer</span><span class="controleer" hidden aria-hidden="true"></span></button>
       </div>
       <div id="answer-help" class="muted">Druk op Enter om te verzenden.</div>
     </form>`);
