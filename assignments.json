@@ -1,0 +1,19 @@
+{
+  "game": {
+    "name": "JBZ Anesthesiologendagen",
+    "edition": "2025",
+    "startAt": "2025-12-11T09:00:00+01:00"
+  },
+  "assignments": [
+    {
+      "id": 1,
+      "title": "Startopdracht",
+      "description": "Vind de code op de poster in de lobby.",
+      "answerCombined": "Wct2Dag2wfkOeQpS2HvB5A==:82923ab42cd8f86edbae9ea128abbd4cee7feccbd58b1ac5c9e9a42cd64722b0",
+      "case": "insensitive",
+      "trim": true,
+      "reveal": { "type": "text", "content": "Welke kleur heeft de lamp op de OK?" },
+      "hints": ["Check de linkerhoek."]
+    }
+  ]
+}
