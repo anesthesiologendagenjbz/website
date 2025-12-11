@@ -152,7 +152,7 @@ export function renderAdmin(container) {
 
   function addAssignment() {
     const nextId = (data.assignments?.length ? Math.max(...data.assignments.map(x => x.id || 0)) + 1 : 1);
-    const a = { id: nextId, title: `Opdracht ${nextId}`, description: '', reveal: { type: 'text', content: '' }, case: 'insensitive', trim: true };
+    const a = { id: nextId, description: '', reveal: { type: 'text', content: '' }, case: 'insensitive', trim: true };
     (data.assignments || (data.assignments = [])).push(a);
     renderList();
     setStatus(`Opdracht ${nextId} toegevoegd.`, 'success');
